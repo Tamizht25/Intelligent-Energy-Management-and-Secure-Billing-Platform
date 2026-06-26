@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Energy System</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="loginPage" class="center">
+  <h2>⚡ Smart Energy Login</h2>
+  <input id="username" placeholder="Username">
+  <input id="password" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<!-- APP -->
+<div id="app" class="hidden">
+
+<div class="sidebar">
+  <h2>⚡ Smart Meter</h2>
+  <button onclick="showPage('dashboard')">Dashboard</button>
+  <button onclick="showPage('appliances')">Appliances</button>
+  <button onclick="showPage('analytics')">Analytics</button>
+  <button onclick="showPage('budget')">Budget</button>
+  <button onclick="showPage('blockchain')">Blockchain</button>
+</div>
+
+<div class="main">
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="page">
+  <h2>Dashboard</h2>
+
+  <div class="meter">
+    <p>⚡ Power: <span id="power"></span></p>
+    <p>🔌 Current: <span id="current"></span></p>
+    <p>🔋 Energy: <span id="energy"></span></p>
+    <p>⏱ Hour: <span id="hour"></span></p>
+  </div>
+
+  <canvas id="liveChart"></canvas>
+
+  <h3>Prediction</h3>
+  <p id="prediction"></p>
+
+  <h3>Alerts</h3>
+  <p id="alerts"></p>
+</div>
+
+<!-- APPLIANCES -->
+<div id="appliances" class="page hidden">
+  <h2>Appliances</h2>
+  <div id="applianceList"></div>
+
+  <h3>Add Appliance</h3>
+  <input id="name" placeholder="Name">
+  <input id="powerInput" placeholder="Power">
+  <input id="count" placeholder="Count">
+  <button onclick="addAppliance()">Add</button>
+</div>
+
+<!-- ANALYTICS -->
+<div id="analytics" class="page hidden">
+  <h2>Analytics</h2>
+  <canvas id="hourlyChart"></canvas>
+  <canvas id="weeklyChart"></canvas>
+  <canvas id="monthlyChart"></canvas>
+</div>
+
+<!-- BUDGET -->
+<div id="budget" class="page hidden">
+  <h2>Budget</h2>
+
+  <input id="budgetInput" placeholder="Monthly Budget">
+  <button onclick="setBudget()">Set</button>
+
+  <h3>Plan</h3>
+  <div id="planBox"></div>
+
+  <h3>Summary</h3>
+  <div id="summary"></div>
+</div>
+
+<!-- BLOCKCHAIN -->
+<div id="blockchain" class="page hidden">
+  <h2>Blockchain</h2>
+  <div id="chain"></div>
+</div>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
