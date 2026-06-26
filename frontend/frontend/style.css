@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #050816;
+  color: cyan;
+}
+
+.center {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.hidden { display:none; }
+
+.sidebar {
+  position: fixed;
+  width: 220px;
+  height: 100%;
+  background: black;
+  padding: 20px;
+}
+
+.sidebar button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid cyan;
+  background: transparent;
+  color: cyan;
+  cursor: pointer;
+}
+
+.main {
+  margin-left: 240px;
+  padding: 20px;
+}
+
+.meter {
+  border: 2px solid cyan;
+  padding: 20px;
+  box-shadow: 0 0 15px cyan;
+  margin-bottom: 20px;
+}
+
+.appliance-btn {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid cyan;
+}
+
+.appliance-btn.active {
+  background: cyan;
+  color: black;
+}
+
+.card {
+  border: 1px solid cyan;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .sidebar { position: relative; width:100%; height:auto; }
+  .main { margin-left:0; }
+}
