@@ -44,23 +44,10 @@ The solution enables users to understand consumption behavior, reduce electricit
 ---
 
 ## System Architecture
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/f90824e1-6d02-42fb-87e3-40ced01aa909" />
 
 
-User Interface (HTML/CSS/JavaScript)
-                │
-                ▼
-        FastAPI Backend
-                │
- ┌──────────────┼──────────────┐
- │              │              │
- ▼              ▼              ▼
-Energy      Machine       Blockchain
-Engine      Learning      Billing
-            Module        Module
- │              │              │
- └──────────────┼──────────────┘
-                ▼
-      Analytics Dashboard
+
 ```
 
 ---
